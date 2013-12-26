@@ -21,5 +21,5 @@ interface ITranslator {
 	 * @param type $languageFrom
 	 * @return 
 	 */
-	public function translate($text, $languageTo, $languageFrom);
+	public function translate($text, $languageFrom, $languageTo);
 }

@@ -17,12 +17,13 @@ abstract class Translator {
 	protected function doRequest($url, $params = null){
 		
 		if($params != null && is_array($params)){
-			$url .= '?' . http_build_query($data);
+			$url .= '?' . http_build_query($params);
 		}
 		
 		try {
 			$ch = curl_init($url);
-			return $result = curl_exec($ch);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			return curl_exec($ch);
 		} catch (Exception $exc) {
 			throw new \ErrorException('Bad API call.');
 		}
@@ -36,7 +37,7 @@ abstract class Translator {
 		$methods = $this->getMethods();
 		
 		foreach($methods as $method){
-			if($method->getKey() === $key){
+			if($method->getType() === $key){
 				return $method;
 			}
 		}
