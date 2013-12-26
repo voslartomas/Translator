@@ -5,6 +5,7 @@
     "keywords": ["services","translation", "php", "Yandex", "wrapper", "translator"],
     "homepage": "http://www.webcook.cz",
     "license": "MIT",
+    "minimum-stability" : "dev",
     "authors": [
         {
             "name": "Tomas Voslar",
