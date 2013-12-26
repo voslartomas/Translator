@@ -24,7 +24,7 @@ $service = $factory->build(
 $languages = $service->getLanguages();
 
 // translate text
-$translation = $service->translate('Hi, how are you?', 'cs', 'en');
+$translation = $service->translate('Hi, how are you?', 'en', 'cs');
 ```
 
 LICENSE
