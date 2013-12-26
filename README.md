@@ -12,12 +12,14 @@ Usage
 --
 
 ```
-$service = new Webcook\Translator\ServiceFactory()->build(
-										Webcook\Translator\ServiceFactory::YANDEX,
-										array(
-											'key' => 'YOUR API KEY'
-										)
-														);
+$factory = new Webcook\Translator\ServiceFactory();
+$service = $factory->build(
+		Webcook\Translator\ServiceFactory::YANDEX,
+		array(
+			'key' => 'YOUR API KEY'
+		)
+	);
+
 // returns list of available languages
 $languages = $service->getLanguages();
 
