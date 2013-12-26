@@ -1,0 +1,27 @@
+{
+    "name": "webcook/translator",
+    "type": "library",
+    "description": "Wrapper for various translator API services.",
+    "keywords": ["services","translation", "php", "Yandex", "wrapper", "translator"],
+    "homepage": "http://www.webcook.cz",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomáš Voač",
+            "email": "tomas.voslar@webcook.cz",
+            "homepage": "http://www.webcook.cz",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "classmap": ["/"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x-dev"
+        }
+    }
+}
