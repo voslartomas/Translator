@@ -10,7 +10,7 @@ interface ITranslator {
 	
 	/**
 	 * Returns list of possible languages.
-	 * @return Array list of possible languages
+	 * @return Array<LanguageResult> list of possible languages
 	 */
 	public function getLanguages();
 	
@@ -19,7 +19,7 @@ interface ITranslator {
 	 * @param type $text
 	 * @param type $languageTo
 	 * @param type $languageFrom
-	 * @return 
+	 * @return TranslateResult
 	 */
 	public function translate($text, $languageFrom, $languageTo);
 }
