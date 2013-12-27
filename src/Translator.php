@@ -23,15 +23,20 @@ abstract class Translator {
 	 * @param Array $params parameters of request
 	 * @return String $response
 	 */
-	protected function doRequest($url, $params = null){
+	protected function doRequest($url, $params = null, $header = null){
 		
 		if($params != null && is_array($params)){
 			$url .= '?' . http_build_query($params);
 		}
-		
+                
 		try {
 			$ch = curl_init($url);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                        
+                        if($header != null){
+                            curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+                        }
+                        
 			return curl_exec($ch);
 		} catch (Exception $exc) {
 			throw new \ErrorException('Bad API call.');

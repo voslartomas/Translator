@@ -3,11 +3,12 @@ Translator
 
 This is wrapper for various translator APIs.
 
-Implemented services
+Implemented translation services
 --
 
 - Yandex
-- Google Translate API
+- Google - not tested
+- Bing - not tested
 
 Usage
 --
