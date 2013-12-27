@@ -8,12 +8,21 @@ namespace Webcook\Translator;
  */
 abstract class Translator {
 	
-	protected $methods = array();
-	
+	/* @var int Constant for get languages method. */
 	const METHOD_GET_LANGUAGES = 1;
 	
+	/* @var int Constant for translate method. */
 	const METHOD_TRANSLATE = 2;
 	
+	/* @var Array<Method> list of possible methods. */
+	protected $methods = array();
+	
+	/**
+	 * Make API request and returns response.
+	 * @param String $url url of request
+	 * @param Array $params parameters of request
+	 * @return String $response
+	 */
 	protected function doRequest($url, $params = null){
 		
 		if($params != null && is_array($params)){
@@ -29,10 +38,19 @@ abstract class Translator {
 		}
 	}
 	
+	/**
+	 * Returns all methods.
+	 * @return Array<Method>
+	 */
 	public function getMethods() {
 		return $this->methods;
 	}
 	
+	/**
+	 * Returns one method by key.
+	 * @param String $key
+	 * @return Method
+	 */
 	protected function getMethod($key){
 		$methods = $this->getMethods();
 		
@@ -45,6 +63,11 @@ abstract class Translator {
 		throw new Exception("Method `$key` does not exists.");
 	}
 	
+	/**
+	 * Returns method name by key.
+	 * @param String $key
+	 * @return String $name name of the method
+	 */
 	protected function getMethodName($key){
 		$method = $this->getMethod($key);
 		
