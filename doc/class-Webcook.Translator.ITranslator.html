@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface Webcook\Translator\ITranslator | Webcook translator</title>
+
+	<script type="text/javascript" src="resources/combined.js?2072791610"></script>
+	<script type="text/javascript" src="elementlist.js?924972180"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Webcook.html">Webcook<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Webcook.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="namespace-Webcook.Translator.Results.html">Results</a>
+						</li>
+				<li><a href="namespace-Webcook.Translator.Services.html">Services</a>
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Webcook.Translator.Method.html">Method</a></li>
+				<li><a href="class-Webcook.Translator.MethodParameter.html">MethodParameter</a></li>
+				<li><a href="class-Webcook.Translator.ServiceFactory.html">ServiceFactory</a></li>
+				<li><a href="class-Webcook.Translator.Translator.html">Translator</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-Webcook.Translator.ITranslator.html">ITranslator</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Webcook.Translator.html" title="Summary of Webcook\Translator"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface ITranslator</h1>
+
+
+	<div class="description">
+	
+<p>Interface for translators.</p>
+
+	</div>
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-Webcook.Translator.Services.YandexTranslator.html">Webcook\Translator\Services\YandexTranslator</a>
+	</div>
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Webcook.html">Webcook</a>\<a href="namespace-Webcook.Translator.html">Translator</a><br />
+		
+
+				<b>Author:</b>
+				Tomáš Voslař &lt;tomas.voslar at webcook.cz&gt;<br />
+		<b>Located at</b> <a href="source-class-Webcook.Translator.ITranslator.html#5-25" title="Go to source code">ITranslator.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getLanguages" id="_getLanguages">
+
+		<td class="attributes"><code>
+			 public 
+			Array&lt;LanguageResult&gt;
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLanguages">#</a>
+		<code><a href="source-class-Webcook.Translator.ITranslator.html#11-15" title="Go to source code">getLanguages</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns list of possible languages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns list of possible languages.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Array&lt;LanguageResult&gt;</code><br>list of possible languages<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="translate" id="_translate">
+
+		<td class="attributes"><code>
+			 public 
+			TranslateResult
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_translate">#</a>
+		<code><a href="source-class-Webcook.Translator.ITranslator.html#17-24" title="Go to source code">translate</a>( <span>type <var>$text</var></span>, <span>type <var>$languageFrom</var></span>, <span>type <var>$languageTo</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Translate text.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Translate text.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd><code>type</code><br>$text</dd>
+					<dt><var>$languageFrom</var></dt>
+					<dd><code>type</code><br>$languageTo</dd>
+					<dt><var>$languageTo</var></dt>
+					<dd><code>type</code><br>$languageFrom</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TranslateResult</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Webcook translator API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

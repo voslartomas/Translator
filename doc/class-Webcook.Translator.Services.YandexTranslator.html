@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class Webcook\Translator\Services\YandexTranslator | Webcook translator</title>
+
+	<script type="text/javascript" src="resources/combined.js?2072791610"></script>
+	<script type="text/javascript" src="elementlist.js?924972180"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-Webcook.html">Webcook<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-Webcook.Translator.html">Translator<span></span></a>
+						<ul>
+				<li><a href="namespace-Webcook.Translator.Results.html">Results</a>
+						</li>
+				<li class="active"><a href="namespace-Webcook.Translator.Services.html">Services</a>
+						</li>
+							</ul></li></ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Webcook.Translator.Services.YandexTranslator.html">YandexTranslator</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Webcook.Translator.Services.html" title="Summary of Webcook\Translator\Services"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class YandexTranslator</h1>
+
+
+	<div class="description">
+	
+<p>Yandex implementation of translator.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-Webcook.Translator.Translator.html"><span>Webcook\Translator\Translator</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>Webcook\Translator\Services\YandexTranslator</span></b>			
+			 implements 
+				<a href="class-Webcook.Translator.ITranslator.html"><span>Webcook\Translator\ITranslator</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Webcook.html">Webcook</a>\<a href="namespace-Webcook.Translator.html">Translator</a>\<a href="namespace-Webcook.Translator.Services.html">Services</a><br />
+		
+
+				<b>Author:</b>
+				Tomáš Voslař &lt;tomas.voslar at webcook.cz&gt;<br />
+		<b>Located at</b> <a href="source-class-Webcook.Translator.Services.YandexTranslator.html#5-91" title="Go to source code">Services/YandexTranslator.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Webcook.Translator.Services.YandexTranslator.html#17-44" title="Go to source code">__construct</a>( <span>String <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd><code>String</code><br>$key API key for Yandex service.</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-BadMethodCallException.html">BadMethodCallException</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLanguages" id="_getLanguages">
+
+		<td class="attributes"><code>
+			 public 
+			Array&lt;LanguageResult&gt;
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLanguages">#</a>
+		<code><a href="source-class-Webcook.Translator.Services.YandexTranslator.html#46-64" title="Go to source code">getLanguages</a>( )</code>
+
+		<div class="description short">
+			
+<p>Get all possible languages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get all possible languages.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>Array&lt;LanguageResult&gt;</code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Webcook.Translator.ITranslator.html#_getLanguages">Webcook\Translator\ITranslator::getLanguages()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="translate" id="_translate">
+
+		<td class="attributes"><code>
+			 public 
+			TranslateResult
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_translate">#</a>
+		<code><a href="source-class-Webcook.Translator.Services.YandexTranslator.html#66-80" title="Go to source code">translate</a>( <span>type <var>$text</var></span>, <span>type <var>$languageFrom</var></span>, <span>type <var>$languageTo</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Translate text.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Translate text.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$text</var></dt>
+					<dd><code>type</code><br>$text</dd>
+					<dt><var>$languageFrom</var></dt>
+					<dd><code>type</code><br>$languageTo</dd>
+					<dt><var>$languageTo</var></dt>
+					<dd><code>type</code><br>$languageFrom</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TranslateResult</code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-Webcook.Translator.ITranslator.html#_translate">Webcook\Translator\ITranslator::translate()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getApiKey" id="_getApiKey">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getApiKey">#</a>
+		<code><a href="source-class-Webcook.Translator.Services.YandexTranslator.html#83-85" title="Go to source code">getApiKey</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setApiKey" id="_setApiKey">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setApiKey">#</a>
+		<code><a href="source-class-Webcook.Translator.Services.YandexTranslator.html#88-90" title="Go to source code">setApiKey</a>( <span>mixed <var>$apiKey</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Webcook.Translator.Translator.html#methods">Webcook\Translator\Translator</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Webcook.Translator.Translator.html#_doRequest">doRequest()</a>, 
+			<a href="class-Webcook.Translator.Translator.html#_getMethod">getMethod()</a>, 
+			<a href="class-Webcook.Translator.Translator.html#_getMethodName">getMethodName()</a>, 
+			<a href="class-Webcook.Translator.Translator.html#_getMethods">getMethods()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="API_URL" id="API_URL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+				<a href="source-class-Webcook.Translator.Services.YandexTranslator.html#12" title="Go to source code"><b>API_URL</b></a>
+		</code></td>
+		<td class="value"><code><span class="php-quote">'https://translate.yandex.net/api/v1.5/tr.json/'</span></code></td>
+		<td class="description"><div>
+			<a href="#API_URL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Constants inherited from <a href="class-Webcook.Translator.Translator.html#constants">Webcook\Translator\Translator</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Webcook.Translator.Translator.html#METHOD_GET_LANGUAGES"><b>METHOD_GET_LANGUAGES</b></a>, 
+			<a href="class-Webcook.Translator.Translator.html#METHOD_TRANSLATE"><b>METHOD_TRANSLATE</b></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-Webcook.Translator.Translator.html#properties">Webcook\Translator\Translator</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Webcook.Translator.Translator.html#$methods"><var>$methods</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Webcook translator API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
