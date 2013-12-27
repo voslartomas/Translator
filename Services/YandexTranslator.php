@@ -19,8 +19,7 @@ class YandexTranslator extends \Webcook\Translator\Translator implements \Webcoo
 	 * @throws \BadMethodCallException
 	 */
 	public function __construct($key){
-		
-		
+
 		// checks parameters
 		if(empty($key)){
 			throw new \BadMethodCallException('Bad parameters given.');
