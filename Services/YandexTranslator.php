@@ -8,11 +8,11 @@ namespace Webcook\Translator\Services;
  */
 class YandexTranslator extends \Webcook\Translator\Translator implements \Webcook\Translator\ITranslator {
 	
+	/* basic URL address of Yandex API */
 	const API_URL = 'https://translate.yandex.net/api/v1.5/tr.json/';
 	
+	/* API key for Yandex service */
 	private $apiKey = null;
-	
-	protected $methods = array();
 	
 	/**
 	 * @param String $key API key for Yandex service.
@@ -45,7 +45,8 @@ class YandexTranslator extends \Webcook\Translator\Translator implements \Webcoo
 	}
 	
 	/**
-	 * 
+	 * Get all possible languages.
+	 * @return Array<LanguageResult>
 	 */
 	public function getLanguages() {
 		$url = self::API_URL . $this->getMethodName(self::METHOD_GET_LANGUAGES);
@@ -63,6 +64,10 @@ class YandexTranslator extends \Webcook\Translator\Translator implements \Webcoo
 		return $languages;
 	}
 
+	/**
+	 * Translate text.
+	 * @return TranslateResult
+	 */
 	public function translate($text, $languageFrom, $languageTo) {
 		$url = self::API_URL . $this->getMethodName(self::METHOD_TRANSLATE);
 		
@@ -75,10 +80,12 @@ class YandexTranslator extends \Webcook\Translator\Translator implements \Webcoo
 		return new \Webcook\Translator\Results\TranslateResult($response->text[0]);
 	}	
 	
+	/* Getter for api key. */
 	public function getApiKey() {
 		return $this->apiKey;
 	}
 
+	/* Setter for api key. */
 	public function setApiKey($apiKey) {
 		$this->apiKey = $apiKey;
 	}
