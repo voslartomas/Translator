@@ -8,8 +8,13 @@ namespace Webcook\Translator;
  */
 class ServiceFactory {
 	
+	/* @var Yandex service constant. */
 	const YANDEX = 1;
 	
+	/**
+	 * Creates service.
+	 * @return Translator
+	 */
 	public function build($service, $params = array()){
 		
 		switch ($service) {
