@@ -7,6 +7,7 @@ Implemented services
 --
 
 - Yandex
+- Google Translate API
 
 Usage
 --
