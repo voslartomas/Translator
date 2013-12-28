@@ -3,6 +3,16 @@ Translator
 
 This is wrapper for various translate API's.
 
+Instalation
+--
+
+Add this line into your composer file.
+
+```
+require: "webcook/translator": "0.*@dev"
+```
+
+
 Implemented translate services
 --
 
