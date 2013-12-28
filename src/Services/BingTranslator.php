@@ -9,24 +9,29 @@ namespace Webcook\Translator\Services;
  */
 class BingTranslator extends \Webcook\Translator\Translator implements \Webcook\Translator\ITranslator {
 	
-	/* basic URL address of Yandex API */
+	/* basic URL address of Bing API */
 	const API_URL = 'http://api.microsofttranslator.com/v2/Http.svc/';
 	
-	/* API key for Yandex service */
-	private $apiKey = null;
+	/* Client id. */
+	private $clientId = null;
+        
+        /* Client secret. */
+        private $clientSecret = null;
 	
 	/**
-	 * @param String $key API key for Yandex service.
+	 * @param String $clientId
+         * @param String $clientSecret
 	 * @throws \BadMethodCallException
 	 */
-	public function __construct($key){
+	public function __construct($clientId, $clientSecret){
 
 		// checks parameters
-		if(empty($key)){
+		if(empty($clientId) || empty($clientSecret)){
 			throw new \BadMethodCallException('Bad parameters given.');
 		}
 		
-		$this->apiKey = $key;
+		$this->clientId = $clientId;
+                $this->clientSecret = $clientSecret;
 		
 		// add methods
 		$getLangMethod = new \Webcook\Translator\Method('GetLanguagesForTranslate', self::METHOD_GET_LANGUAGES, array(
@@ -54,7 +59,7 @@ class BingTranslator extends \Webcook\Translator\Translator implements \Webcook\
 		$url = self::API_URL . $this->getMethodName(self::METHOD_GET_LANGUAGES);
 		
 		$response = json_decode($this->doRequest($url, array(
-                        'format' => 'json'
+                        'appId' => ''
 		), $this->getHeader()));
 		
 		// TODO implement response
@@ -70,33 +75,28 @@ class BingTranslator extends \Webcook\Translator\Translator implements \Webcook\
 		$url = self::API_URL . $this->getMethodName(self::METHOD_TRANSLATE);
 		
 		$response = json_decode($this->doRequest($url, array(
-			'text' => $text,
+                        'appId' => '',
+                        'text' => $text,
 			'from' => $languageFrom,
                         'to' => $languageTo,
-                        'format' => 'text/html'
+                        'contentTYpe' => 'text/html'
 		), $this->getHeader()));
 		
                 // TODO implement response
                 
+		
 		return new \Webcook\Translator\Results\TranslateResult($response->text[0]);
 	}	
 	
         private function getHeader(){
-            // TODO implement authorization token request
             
-            $header = array();
-            $header[] = 'Authorization: Basic ' . base64_encode($this->key . ":" . $this->key);
-            
-            return $header;
+           $response = json_decode($this->doRequest($url, array(
+                        'client_id' => $this->clientId,
+                        'client_secret' => $this->clientSecret,
+                        'scope' => 'http://api.microsofttranslator.com',
+                        'grant_type' => 'client_credentials'
+            ), null, true, false));
+	   
+	    return array('Bearer ' . $response->access_token, "Content-Type: text/xml");
         }
-        
-	/* Getter for api key. */
-	public function getApiKey() {
-		return $this->apiKey;
-	}
-
-	/* Setter for api key. */
-	public function setApiKey($apiKey) {
-		$this->apiKey = $apiKey;
-	}
 }

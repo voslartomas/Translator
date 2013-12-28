@@ -23,15 +23,21 @@ abstract class Translator {
 	 * @param Array $params parameters of request
 	 * @return String $response
 	 */
-	protected function doRequest($url, $params = null, $header = null){
+	protected function doRequest($url, $params = null, $header = null, $post = false, $ssl = false){
 		
-		if($params != null && is_array($params)){
+		if($params != null && is_array($params) && !$post){
 			$url .= '?' . http_build_query($params);
 		}
                 
 		try {
 			$ch = curl_init($url);
                         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                        curl_setopt($ch, CURLOPT_POST, $post);
+                        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $ssl);
+                        
+                        if($post){
+                            curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+                        }
                         
                         if($header != null){
                             curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
