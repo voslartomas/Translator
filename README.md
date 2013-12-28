@@ -3,7 +3,7 @@ Translator
 
 This is wrapper for various translate API's.
 
-Instalation
+Installation
 --
 
 Add this line into your composer file.
