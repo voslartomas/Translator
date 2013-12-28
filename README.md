@@ -1,7 +1,7 @@
 Translator
 --
 
-This is wrapper for various translate API's.
+This is a wrapper for various translate API's.
 
 Installation
 --
