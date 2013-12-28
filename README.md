@@ -1,14 +1,14 @@
 Translator
 --
 
-This is wrapper for various translator APIs.
+This is wrapper for various translate API's.
 
-Implemented translation services
+Implemented translate services
 --
 
 - Yandex
 - Google - not tested
-- Bing - not tested
+- Bing
 
 Usage
 --

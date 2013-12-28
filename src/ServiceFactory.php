@@ -52,4 +52,12 @@ class ServiceFactory {
 	    break;
 	}
     }
+    
+    public static function getServices(){
+	return array(
+	    self::YANDEX => 'Yandex',
+	    self::GOOGLE => 'Google',
+	    self::BING => 'Bing'
+	);
+    }
 }

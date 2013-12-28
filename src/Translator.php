@@ -30,8 +30,9 @@ abstract class Translator {
 		}
                 
 		try {
-			$ch = curl_init($url);
-                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			$ch = curl_init();
+			curl_setopt ($ch, CURLOPT_URL, $url);
+                        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
                         curl_setopt($ch, CURLOPT_POST, $post);
                         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, $ssl);
                         
@@ -43,7 +44,17 @@ abstract class Translator {
                             curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
                         }
                         
-			return curl_exec($ch);
+			$data = curl_exec($ch);
+			
+			$curlErrno = curl_errno($ch);
+			if ($curlErrno) {
+			    $curlError = curl_error($ch);
+			    throw new \Exception($curlError);
+			}
+			
+			curl_close($ch);
+			
+			return $data;
 		} catch (Exception $exc) {
 			throw new \ErrorException('Bad API call.');
 		}
